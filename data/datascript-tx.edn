@@ -1,0 +1,23 @@
+;; data/datascript-tx.edn — DataScript tx-data derived from src/statute/facts.cljc
+;; `statute.facts/catalog` (ADR-2607141700 Wave 0). Same shape as sibling files.
+
+[#:statute{:id "idn.uu-40-2007-perseroan-terbatas"
+           :title "Undang-Undang tentang Perseroan Terbatas (Limited Liability Companies)"
+           :jurisdiction "IDN"
+           :kind :law
+           :law-number "UU No. 40 Tahun 2007"
+           :url "https://jdih.kemenkeu.go.id/dok/uu-40-tahun-2007"
+           :url-provenance :official-jdih-kemenkeu-go-id
+           :enacted-date "2007-08-16"
+           :retrieved-at "2026-07-16"
+           :topic [:corporate-governance :incorporation]}
+ #:statute{:id "idn.uu-27-2022-pelindungan-data-pribadi"
+           :title "Undang-Undang tentang Pelindungan Data Pribadi (Personal Data Protection)"
+           :jurisdiction "IDN"
+           :kind :law
+           :law-number "UU No. 27 Tahun 2022"
+           :url "https://jdih.kemenkeu.go.id/dok/uu-27-tahun-2022"
+           :url-provenance :official-jdih-kemenkeu-go-id
+           :enacted-date "2022-10-17"
+           :retrieved-at "2026-07-16"
+           :topic [:data-protection :privacy]}]
