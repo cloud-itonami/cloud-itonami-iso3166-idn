@@ -18,7 +18,7 @@
 (defn -main [& _]
   (let [db (store/seed-db)
         actor (op/build db)]
-    (println "== engagement/intake eng-1 (JPN, clean) ==")
+    (println "== engagement/intake eng-1 (IDN, clean) ==")
     (println (exec-op actor "t1" {:op :engagement/intake :subject "eng-1"
                                   :patch {:id "eng-1" :operator "Kita Systems ID"}} operator))
 
