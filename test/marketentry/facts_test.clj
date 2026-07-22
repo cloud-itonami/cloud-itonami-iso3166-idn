@@ -26,3 +26,19 @@
     (is (= 3 (:requested c)))
     (is (= 2 (:covered c)))
     (is (= ["ATL"] (:missing-jurisdictions c)))))
+
+(deftest comparative-jurisdictions-are-not-cross-contaminated
+  ;; SGP and IND are legitimate comparative-jurisdiction entries in the
+  ;; same catalog (same pattern as the sibling AGO/GHA actors' USA/ZAF/BRA
+  ;; and NGA/KEN entries) -- each must carry its OWN jurisdiction's own
+  ;; legal basis, not another jurisdiction's. A prior version of this
+  ;; catalog had SGP's :legal-basis copy-pasted as "GFR" (India's General
+  ;; Financial Rules, 2017) instead of Singapore's own Government
+  ;; Procurement Act (GPA, Cap. 120, 1997; https://sso.agc.gov.sg/Act/GPA1997).
+  (testing "Singapore cites its own Government Procurement Act, not India's GFR"
+    (is (= "GPA" (:legal-basis (facts/spec-basis "SGP")))))
+  (testing "India cites its own General Financial Rules"
+    (is (= "GFR" (:legal-basis (facts/spec-basis "IND")))))
+  (testing "Singapore and India don't share a legal-basis value"
+    (is (not= (:legal-basis (facts/spec-basis "SGP"))
+              (:legal-basis (facts/spec-basis "IND"))))))

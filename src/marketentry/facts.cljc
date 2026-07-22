@@ -18,7 +18,7 @@
    "USA" {:name "United States" :owner-authority "GSA/SAM.gov" :legal-basis "FAR"
           :national-spec "SAM.gov" :provenance "https://sam.gov/"
           :required-evidence ["EIN record" "SAM.gov registration record" "State business registration record" "SAM UEI verification record"]}
-   "SGP" {:name "Singapore" :owner-authority "GeBIZ" :legal-basis "GFR"
+   "SGP" {:name "Singapore" :owner-authority "GeBIZ" :legal-basis "GPA"
           :national-spec "GeBIZ" :provenance "https://www.gebiz.gov.sg/"
           :required-evidence ["UEN record" "GeBIZ registration" "GST record" "Authorized-representative record"]}
    "IND" {:name "India" :owner-authority "GeM" :legal-basis "GFR"
